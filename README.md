@@ -2,8 +2,15 @@
 
 Ein interaktives Web-Quiz entwickelt mit Vanilla JavaScript und Bootstrap für ein modernes und responsives Design.
 
+## 🌐 Live Demo
+
+**[🎯 Quiz jetzt spielen!](https://molaskidata.github.io/coding-at-3am-main/)**
+
+*Hinweis: Es kann einige Minuten dauern, bis die Website nach der ersten Aktivierung verfügbar ist.*
+
 ## 📋 Inhaltsverzeichnis
 
+- [Live Demo](#live-demo)
 - [Übersicht](#übersicht)
 - [Features](#features)
 - [Demo](#demo)
@@ -34,6 +41,8 @@ Diese Quiz-App ist eine einfache, aber effektive Webanwendung, die es Benutzern 
 - 🌙 **Dark Theme** - Augenschonendes dunkles Design
 
 ## 🚀 Demo
+
+**[▶️ Live-Version testen](https://molaskidata.github.io/coding-at-3am-main/)**
 
 Das Quiz besteht aus Multiple-Choice-Fragen mit folgenden Funktionen:
 - Klicken Sie auf eine Antwort, um automatisch zur nächsten Frage zu gelangen
