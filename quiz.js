@@ -76,6 +76,81 @@ let questions = [
         question: "Wer malte die 'Mona Lisa'?",
         answers: ["Michelangelo", "Raffael", "Leonardo da Vinci", "Donatello"],
         correctAnswer: 2
+    },
+    {
+        question: "Welches ist das härteste natürliche Material?",
+        answers: ["Graphit", "Diamant", "Quarz", "Stahl"],
+        correctAnswer: 1
+    },
+    {
+        question: "In welchem Land wurde die Pizza erfunden?",
+        answers: ["Griechenland", "Frankreich", "Italien", "Spanien"],
+        correctAnswer: 2
+    },
+    {
+        question: "Wie heißt der höchste Berg der Welt?",
+        answers: ["K2", "Mount Everest", "Kilimandscharo", "Mont Blanc"],
+        correctAnswer: 1
+    },
+    {
+        question: "Welche Sprache wird in Brasilien gesprochen?",
+        answers: ["Spanisch", "Portugiesisch", "Französisch", "Italienisch"],
+        correctAnswer: 1
+    },
+    {
+        question: "Wer erfand das Telefon?",
+        answers: ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Benjamin Franklin"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welches Tier ist das Symbol von WWF?",
+        answers: ["Tiger", "Elefant", "Panda", "Eisbär"],
+        correctAnswer: 2
+    },
+    {
+        question: "In welchem Jahr landete Neil Armstrong auf dem Mond?",
+        answers: ["1967", "1968", "1969", "1970"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welche Währung wird in Japan verwendet?",
+        answers: ["Yuan", "Won", "Yen", "Dong"],
+        correctAnswer: 2
+    },
+    {
+        question: "Wie viele Herzen hat ein Oktopus?",
+        answers: ["1", "2", "3", "4"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welcher Autor schrieb 'Der Herr der Ringe'?",
+        answers: ["C.S. Lewis", "J.R.R. Tolkien", "George R.R. Martin", "Terry Pratchett"],
+        correctAnswer: 1
+    },
+    {
+        question: "Was ist die Hauptzutat von Guacamole?",
+        answers: ["Tomate", "Avocado", "Zwiebel", "Paprika"],
+        correctAnswer: 1
+    },
+    {
+        question: "In welcher Stadt steht die Freiheitsstatue?",
+        answers: ["Boston", "Philadelphia", "Washington D.C.", "New York"],
+        correctAnswer: 3
+    },
+    {
+        question: "Welches Gas macht etwa 78% der Erdatmosphäre aus?",
+        answers: ["Sauerstoff", "Stickstoff", "Kohlendioxid", "Argon"],
+        correctAnswer: 1
+    },
+    {
+        question: "Wer schrieb das Buch '1984'?",
+        answers: ["Aldous Huxley", "Ray Bradbury", "George Orwell", "Kurt Vonnegut"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welcher Kontinent hat die meisten Länder?",
+        answers: ["Asien", "Europa", "Afrika", "Südamerika"],
+        correctAnswer: 2
     }
 ];
 
