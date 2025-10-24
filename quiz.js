@@ -1,5 +1,8 @@
 let score = 0;
 let currentQuestionIndex = 0;
+let timeLeft = 300; // 5 minutes in seconds
+let timerInterval;
+let quizStarted = false;
 
 let questions = [
     {
@@ -151,36 +154,132 @@ let questions = [
         question: "Welcher Kontinent hat die meisten Länder?",
         answers: ["Asien", "Europa", "Afrika", "Südamerika"],
         correctAnswer: 2
+    },
+    {
+        question: "Welches Vitamin wird durch Sonnenlicht in der Haut produziert?",
+        answers: ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+        correctAnswer: 2
+    },
+    {
+        question: "Wie heißt die Hauptstadt von Kanada?",
+        answers: ["Toronto", "Vancouver", "Montreal", "Ottawa"],
+        correctAnswer: 3
+    },
+    {
+        question: "Welcher Künstler schnitt sich das Ohr ab?",
+        answers: ["Pablo Picasso", "Vincent van Gogh", "Claude Monet", "Salvador Dalí"],
+        correctAnswer: 1
+    },
+    {
+        question: "In welchem Ozean liegt die Bermuda-Dreieck?",
+        answers: ["Pazifischer Ozean", "Indischer Ozean", "Atlantischer Ozean", "Arktischer Ozean"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welches Tier schläft am längsten pro Tag?",
+        answers: ["Faultier", "Koala", "Katze", "Bär"],
+        correctAnswer: 1
+    },
+    {
+        question: "Wie viele Zähne hat ein erwachsener Mensch normalerweise?",
+        answers: ["28", "30", "32", "34"],
+        correctAnswer: 2
+    },
+    {
+        question: "Welcher Planet hat die meisten Monde?",
+        answers: ["Jupiter", "Saturn", "Uranus", "Neptun"],
+        correctAnswer: 1
+    },
+    {
+        question: "In welchem Jahr begann der Erste Weltkrieg?",
+        answers: ["1912", "1913", "1914", "1915"],
+        correctAnswer: 2
+    },
+    {
+        question: "Was bedeutet 'www' in einer Internetadresse?",
+        answers: ["World Wide Web", "World Web Wide", "Web World Wide", "Wide World Web"],
+        correctAnswer: 0
+    },
+    {
+        question: "Welche Farbe entsteht beim Mischen von Rot und Gelb?",
+        answers: ["Grün", "Orange", "Lila", "Braun"],
+        correctAnswer: 1
     }
 ];
 
-function displayQuestion(){
+function startQuiz() {
+    document.getElementById('start-screen').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'block';
+    document.getElementById('total-questions').textContent = questions.length;
+    
+    quizStarted = true;
+    startTimer();
+    displayQuestion();
+}
 
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        updateTimerDisplay();
+        
+        if (timeLeft <= 0) {
+            endQuiz("Time's up!");
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    const timerDisplay = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    document.getElementById('timer').textContent = timerDisplay;
+    
+    // Change color when time is running out
+    const timerElement = document.getElementById('timer');
+    if (timeLeft <= 30) {
+        timerElement.className = 'badge bg-danger fs-6';
+    } else if (timeLeft <= 60) {
+        timerElement.className = 'badge bg-warning fs-6';
+    }
+}
+
+function displayQuestion(){
     if(currentQuestionIndex >= questions.length){
-        document.getElementById('quiz-container').hidden = true;
-        document.getElementById('result').hidden = false;
-        document.getElementById('score').textContent = score;
+        endQuiz("Quiz completed!");
         return;
     }
 
-
     let question = questions[currentQuestionIndex];
-
+    
     document.getElementById('question').textContent = question.question;
+    document.getElementById('question-counter').textContent = currentQuestionIndex + 1;
     
     let answersDiv = document.getElementById("answers");
     answersDiv.innerHTML = "";
 
     question.answers.forEach((answer, index) => {
         let answerButton = document.createElement('button');
-        answerButton.classList.add("btn", "btn-dark", "me-2");
+        answerButton.classList.add("btn", "btn-outline-light", "me-2", "mb-2", "w-100");
         answerButton.textContent = answer;
         answerButton.onclick = () => checkAnswer(index);
         answersDiv.appendChild(answerButton);
     });
 }
 
-displayQuestion();
+function endQuiz(message) {
+    clearInterval(timerInterval);
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('result').style.display = 'block';
+    
+    document.getElementById('score').textContent = score;
+    document.getElementById('max-score').textContent = questions.length;
+    
+    const timeUsed = 300 - timeLeft;
+    const minutes = Math.floor(timeUsed / 60);
+    const seconds = timeUsed % 60;
+    document.getElementById('time-info').textContent = 
+        `${message} Time used: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
 
 function checkAnswer(userAnswer){
     let correctAnswer = questions[currentQuestionIndex].correctAnswer;
@@ -195,4 +294,22 @@ function checkAnswer(userAnswer){
 function nextQuestion(){
     currentQuestionIndex += 1;
     displayQuestion();
+}
+
+function restartQuiz() {
+    // Reset all variables
+    score = 0;
+    currentQuestionIndex = 0;
+    timeLeft = 300;
+    quizStarted = false;
+    
+    // Clear any existing timer
+    if (timerInterval) {
+        clearInterval(timerInterval);
+    }
+    
+    // Show start screen again
+    document.getElementById('result').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('start-screen').style.display = 'block';
 }
