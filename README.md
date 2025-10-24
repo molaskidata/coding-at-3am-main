@@ -1,202 +1,215 @@
 # 🧠 JavaScript Quiz App
 
-Ein interaktives Web-Quiz entwickelt mit Vanilla JavaScript und Bootstrap für ein modernes und responsives Design.
+An interactive web quiz built with Vanilla JavaScript and Bootstrap for a modern and responsive design.
 
 ## 🌐 Live Demo
 
-**[🎯 Quiz jetzt spielen!](https://molaskidata.github.io/coding-at-3am-main/)**
+**[🎯 Play the Quiz Now!](https://molaskidata.github.io/coding-at-3am-main/)**
 
-*Hinweis: Es kann einige Minuten dauern, bis die Website nach der ersten Aktivierung verfügbar ist.*
+*Note: It may take a few minutes for the website to become available after initial activation.*
 
-## 📋 Inhaltsverzeichnis
+## 📋 Table of Contents
 
 - [Live Demo](#live-demo)
-- [Übersicht](#übersicht)
+- [Overview](#overview)
 - [Features](#features)
 - [Demo](#demo)
 - [Installation](#installation)
-- [Verwendung](#verwendung)
-- [Technologien](#technologien)
-- [Projektstruktur](#projektstruktur)
-- [Anpassung](#anpassung)
-- [Lizenz](#lizenz)
-- [Beitragen](#beitragen)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Project Structure](#project-structure)
+- [Customization](#customization)
+- [License](#license)
+- [Contributing](#contributing)
 
-## 🎯 Übersicht
+## 🎯 Overview
 
-Diese Quiz-App ist eine einfache, aber effektive Webanwendung, die es Benutzern ermöglicht, ihre Kenntnisse in verschiedenen Themenbereichen zu testen. Das Quiz ist vollständig in Vanilla JavaScript implementiert und nutzt Bootstrap für ein ansprechendes Design.
+This quiz app is a simple yet effective web application that allows users to test their knowledge in various subject areas. The quiz is fully implemented in Vanilla JavaScript and uses Bootstrap for an appealing design.
 
-### Aktuelle Quiz-Themen:
-- Geographie (Hauptstädte)
-- Allgemeinwissen
-- Biologie
+### Current Quiz Topics:
+- Geography (Capitals)
+- General Knowledge
+- Biology
 
 ## ✨ Features
 
-- 🎨 **Modernes Design** - Responsives Interface mit Bootstrap 5
-- ⚡ **Vanilla JavaScript** - Keine externen JavaScript-Frameworks erforderlich
-- 🏆 **Punktesystem** - Automatische Punkteberechnung
-- 📱 **Mobile-friendly** - Optimiert für alle Bildschirmgrößen
-- 🔄 **Einfach erweiterbar** - Neue Fragen können leicht hinzugefügt werden
-- 🌙 **Dark Theme** - Augenschonendes dunkles Design
+- 🎨 **Modern Design** - Responsive interface with Bootstrap 5
+- ⚡ **Vanilla JavaScript** - No external JavaScript frameworks required
+- 🏆 **Scoring System** - Automatic score calculation
+- 📱 **Mobile-friendly** - Optimized for all screen sizes
+- 🔄 **Easily Expandable** - New questions can be easily added
+- 🌙 **Dark Theme** - Eye-friendly dark design
 
 ## 🚀 Demo
 
-**[▶️ Live-Version testen](https://molaskidata.github.io/coding-at-3am-main/)**
+**[▶️ Test Live Version](https://molaskidata.github.io/coding-at-3am-main/)**
 
-Das Quiz besteht aus Multiple-Choice-Fragen mit folgenden Funktionen:
-- Klicken Sie auf eine Antwort, um automatisch zur nächsten Frage zu gelangen
-- Am Ende erhalten Sie Ihre Gesamtpunktzahl
-- Benutzerfreundliche Navigation
+The quiz consists of multiple-choice questions with the following features:
+- Click on an answer to automatically proceed to the next question
+- At the end, you'll receive your total score
+- User-friendly navigation
 
 ## 📦 Installation
 
-### Voraussetzungen
-- Ein moderner Webbrowser (Chrome, Firefox, Safari, Edge)
-- Keine zusätzliche Software erforderlich
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- No additional software required
 
-### Schritte
-1. **Repository klonen**
+### Steps
+1. **Clone the repository**
    ```bash
    git clone https://github.com/molaskidata/coding-at-3am-main.git
    ```
 
-2. **Zum Projektverzeichnis navigieren**
+2. **Navigate to project directory**
    ```bash
    cd coding-at-3am-main
    ```
 
-3. **Quiz starten**
-   - Öffnen Sie die `index.html` Datei in Ihrem Webbrowser
-   - Oder nutzen Sie einen lokalen Server:
+3. **Start the quiz**
+   - Open the `index.html` file in your web browser
+   - Or use a local server:
    ```bash
-   # Mit Python 3
+   # With Python 3
    python -m http.server 8000
    
-   # Mit Node.js (http-server)
+   # With Node.js (http-server)
    npx http-server
    ```
 
-## 🎮 Verwendung
+## 🎮 Usage
 
-1. **Quiz starten**: Öffnen Sie die Anwendung in Ihrem Browser
-2. **Fragen beantworten**: Klicken Sie auf eine der vier Antwortmöglichkeiten
-3. **Fortschritt verfolgen**: Das Quiz wechselt automatisch zur nächsten Frage
-4. **Ergebnis anzeigen**: Am Ende sehen Sie Ihre Gesamtpunktzahl
+1. **Start Quiz**: Open the application in your browser
+2. **Answer Questions**: Click on one of the four answer options
+3. **Track Progress**: The quiz automatically switches to the next question
+4. **View Results**: At the end, you'll see your total score
 
-## 🛠 Technologien
+## 🛠 Technologies
 
-- **HTML5** - Struktur der Anwendung
-- **CSS3** - Styling (über Bootstrap)
-- **JavaScript (ES6+)** - Logik und Interaktivität
-- **Bootstrap 5.3.0** - UI-Framework für responsives Design
+- **HTML5** - Application structure
+- **CSS3** - Styling (via Bootstrap)
+- **JavaScript (ES6+)** - Logic and interactivity
+- **Bootstrap 5.3.0** - UI framework for responsive design
 
-### CDN-Abhängigkeiten
+### CDN Dependencies
 - Bootstrap CSS: `5.3.0`
 - Bootstrap JavaScript Bundle: `5.3.0`
 
-## 📁 Projektstruktur
+## 📁 Project Structure
 
 ```
 coding-at-3am-main/
 │
-├── index.html          # Hauptseite mit HTML-Struktur
-├── quiz.js            # JavaScript-Logik für das Quiz
-└── README.md          # Projektdokumentation
+├── index.html          # Main page with HTML structure
+├── quiz.js            # JavaScript logic for the quiz
+└── README.md          # Project documentation
 ```
 
-### Datei-Übersicht
+### File Overview
 
 #### `index.html`
-- Enthält die HTML-Struktur des Quiz
-- Einbindung von Bootstrap CSS und JavaScript
-- Definition der Quiz-Container und Ergebnis-Anzeige
+- Contains the HTML structure of the quiz
+- Integration of Bootstrap CSS and JavaScript
+- Definition of quiz containers and result display
 
 #### `quiz.js`
-- **Variablen**: `score`, `currentQuestionIndex`, `questions`
-- **Funktionen**:
-  - `displayQuestion()` - Zeigt die aktuelle Frage an
-  - `checkAnswer(userAnswer)` - Überprüft die Antwort und aktualisiert den Score
-  - `nextQuestion()` - Wechselt zur nächsten Frage
+- **Variables**: `score`, `currentQuestionIndex`, `questions`
+- **Functions**:
+  - `displayQuestion()` - Displays the current question
+  - `checkAnswer(userAnswer)` - Checks the answer and updates the score
+  - `nextQuestion()` - Switches to the next question
 
-## 🔧 Anpassung
+## 🔧 Customization
 
-### Neue Fragen hinzufügen
+### Adding New Questions
 
-Um neue Fragen hinzuzufügen, bearbeiten Sie das `questions` Array in `quiz.js`:
+To add new questions, edit the `questions` array in `quiz.js`:
 
 ```javascript
 let questions = [
     {
-        question: "Ihre Frage hier?",
-        answers: ["Antwort 1", "Antwort 2", "Antwort 3", "Antwort 4"],
-        correctAnswer: 0  // Index der korrekten Antwort (0-3)
+        question: "Your question here?",
+        answers: ["Answer 1", "Answer 2", "Answer 3", "Answer 4"],
+        correctAnswer: 0  // Index of the correct answer (0-3)
     },
-    // Weitere Fragen...
+    // More questions...
 ];
 ```
 
-### Design anpassen
+### Customizing Design
 
-- **Farben**: Ändern Sie die Bootstrap-Klassen in `index.html`
-- **Layout**: Modifizieren Sie die CSS-Klassen
-- **Schriftarten**: Ergänzen Sie eigene CSS-Regeln
+- **Colors**: Change Bootstrap classes in `index.html`
+- **Layout**: Modify CSS classes
+- **Fonts**: Add your own CSS rules
 
-### Funktionalität erweitern
+### Extending Functionality
 
-Mögliche Erweiterungen:
-- Timer für jede Frage
-- Kategorien/Schwierigkeitsgrade
-- Fragen-Datenbank mit JSON
-- Lokale Speicherung von Highscores
-- Sound-Effekte
-- Animationen
+Possible extensions:
+- Timer for each question
+- Categories/difficulty levels
+- Question database with JSON
+- Local storage of high scores
+- Sound effects
+- Animations
 
-## 🤝 Beitragen
+## 🤝 Contributing
 
-Beiträge sind willkommen! So können Sie helfen:
+Contributions are welcome! Here's how you can help:
 
-1. **Fork** das Repository
-2. **Clone** Ihren Fork lokal
-3. **Erstellen** Sie einen neuen Branch für Ihr Feature
+1. **Fork** the repository
+2. **Clone** your fork locally
+3. **Create** a new branch for your feature
    ```bash
    git checkout -b feature/amazing-feature
    ```
-4. **Committen** Sie Ihre Änderungen
+4. **Commit** your changes
    ```bash
    git commit -m 'Add some amazing feature'
    ```
-5. **Pushen** Sie den Branch
+5. **Push** the branch
    ```bash
    git push origin feature/amazing-feature
    ```
-6. **Öffnen** Sie eine Pull Request
+6. **Open** a Pull Request
 
+### Development
 
-## 📝 To-Do / Geplante Features
+For development, we recommend:
+- A local web server for CORS compatibility
+- Browser developer tools for debugging
+- Code editor with JavaScript support (VS Code, Sublime Text, etc.)
 
-- [ ] Mehr Fragenkategorien
-- [ ] Timer-Funktionalität
-- [ ] Schwierigkeitsgrade
-- [ ] Zufällige Fragenreihenfolge
-- [ ] Lokale Speicherung von Ergebnissen
-- [ ] Exportfunktion für Ergebnisse
-- [ ] Multi-Language Support
-- [ ] Admin-Panel für Fragenverwaltung
+## 📝 To-Do / Planned Features
 
-## 🐛 Bekannte Probleme
+- [ ] More question categories
+- [ ] Timer functionality
+- [ ] Difficulty levels
+- [ ] Random question order
+- [ ] Local storage of results
+- [ ] Export function for results
+- [ ] Multi-language support
+- [ ] Admin panel for question management
 
-Aktuell sind keine kritischen Bugs bekannt. Falls Sie Probleme entdecken, erstellen Sie bitte ein Issue im Repository.
+## 🐛 Known Issues
 
-## 📄 Lizenz
+Currently, no critical bugs are known. If you discover problems, please create an issue in the repository.
 
-Dieses Projekt steht unter der MIT-Lizenz. Weitere Details finden Sie in der [LICENSE](LICENSE) Datei.
+## 📄 License
 
-## 👨‍💻 Autor
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## 👨‍💻 Author
 
 **molaskidata**
 - GitHub: [@molaskidata](https://github.com/molaskidata)
 
+## 🙏 Acknowledgments
+
+- Bootstrap team for the excellent CSS framework
+- All contributors and testers
+
 ---
 
-⭐ **Star dieses Repository, wenn es Ihnen gefällt!**
+⭐ **Star this repository if you like it!**
+
+> Built with ❤️ for the JavaScript community
